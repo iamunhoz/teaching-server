@@ -8,10 +8,10 @@
 		"pnpm": ">=7.27"
 	},
 	"scripts": {
-		"dev": "cp ./src/scripts.js ./dist/scripts.js && pnpm /dev:.*/",
-		"dev:build": "cp ./src/scripts.js ./dist/scripts.js && esbuild dev.ts ./src --bundle --outdir=dist --packages=external --platform=node --sourcemap --watch",
-		"dev:run": "cp ./src/scripts.js ./dist/scripts.js && node --inspect --no-warnings --loader ./dist/dev.js --watch dist/src",
-		"build": "cp ./src/scripts.js ./dist/scripts.js && esbuild index=./src --bundle --minify --outdir=dist --packages=external --platform=node",
+		"dev": "pnpm /dev:.*/",
+		"dev:build": "esbuild dev.ts ./src --bundle --outdir=dist --packages=external --platform=node --sourcemap --watch",
+		"dev:run": "node --inspect --no-warnings --loader ./dist/dev.js --watch dist/src",
+		"build": "esbuild index=./src --bundle --minify --outdir=dist --packages=external --platform=node",
 		"start": "node dist"
 	},
 	"dependencies": {
