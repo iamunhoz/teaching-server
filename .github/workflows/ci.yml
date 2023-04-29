@@ -26,13 +26,7 @@ jobs:
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('./pnpm-lock.yaml') }}
           restore-keys: ${{ runner.os }}-pnpm-store-
 
-
       - name: Install dependencies
         run: pnpm i -P
 
       - run: pnpm build
-
-      - name: copy script.js to /dist
-        run: |
-        chmod u+x "${GITHUB_WORKSPACE}/copyscript.sh"
-        bash "${GITHUB_WORKSPACE}/copyscript.sh"
