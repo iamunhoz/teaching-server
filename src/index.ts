@@ -14,9 +14,9 @@ app.get("/", (req, res) => {
 const sendScript: RequestHandler = (req, res) => {
 	const fileBlob = getScriptTextStream()
 
-	res.attachment("script.js")
+	res.attachment("iamunhoz-scripts.js")
 	res.type("text/javascript")
-	res.send(fileBlob)
+	res.status(200).send(fileBlob)
 }
 
 app.get("/iamunhoz-scripts", sendScript)
