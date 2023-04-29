@@ -1,8 +1,8 @@
 import { host } from "./consts"
+import {} from "./scripts"
 import cors from "cors"
 import express from "express"
 import path from "path"
-import {} from "scripts"
 
 const app = express()
 app.use(express.json())
