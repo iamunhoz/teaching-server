@@ -9,3 +9,5 @@ var imprimir = function (value) {
 }
 
 window.imprimir = imprimir
+
+export {}
